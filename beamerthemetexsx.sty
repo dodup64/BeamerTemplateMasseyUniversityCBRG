@@ -1,0 +1,69 @@
+% AUTHOR: Pierre-Yves Dupont
+% EMAIL: pierreyves.dupont@gmail.com
+% The source of this beamer theme is under creative common licence
+% You are free to use it and modify it but you must cite the original author
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+\usecolortheme{texsx}
+\useinnertheme{texsx}
+\useoutertheme{texsx}
+
+
+\beamertemplatenavigationsymbolsempty
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]  
+
+%\setbeamercolor{alerted text}{fg=orange}
+\setbeamercolor{background canvas}{bg=white}
+%\setbeamercolor{block body alerted}{bg=normal text.bg!90!black}
+\setbeamercolor{block body}{bg=normal text.bg!90!black}
+\setbeamercolor{block body example}{bg=normal text.bg!90!black}
+%\setbeamercolor{block title alerted}{use={normal text,alerted text},fg=alerted text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+%\setbeamercolor{block title}{bg=blue}
+%\setbeamercolor{block title example}{use={normal text,example text},fg=example text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+\setbeamercolor{fine separation line}{}
+%\setbeamercolor{frametitle}{fg=brown}
+%\setbeamercolor{item projected}{fg=black}
+%\setbeamercolor{normal text}{bg=black,fg=yellow}
+%\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+%\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+%\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+%\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+%\setbeamercolor{section in sidebar}{fg=brown}
+%\setbeamercolor{section in sidebar shaded}{fg=grey}
+%\setbeamercolor{separation line}{}
+%\setbeamercolor{sidebar}{bg=red}
+%\setbeamercolor{sidebar}{parent=palette primary}
+%\setbeamercolor{structure}{bg=black, fg=green}
+%\setbeamercolor{subsection in sidebar}{fg=brown}
+%\setbeamercolor{subsection in sidebar shaded}{fg=grey}
+%\setbeamercolor{title}{fg=brown}
+%\setbeamercolor{titlelike}{fg=brown}
+
+
+% \usefonttheme{professionalfonts} % using non standard fonts for beamer
+% \usefonttheme{serif} % default family is serif
+% \usepackage{fontspec}
+% \setmainfont{Kalinga}
+
+
+\newcommand{\BlackFrame}{
+%Black frame
+\bgroup
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[plain]
+\Wider[5em]{
+\begin{tikzpicture}
+	\fill[black] (-1,-1) rectangle(\the\paperwidth+1,\the\paperheight+1);
+\end{tikzpicture}
+}
+\end{frame}
+\egroup
+}
+
+\mode<all>

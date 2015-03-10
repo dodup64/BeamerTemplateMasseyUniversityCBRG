@@ -1,0 +1,54 @@
+% AUTHOR: Pierre-Yves Dupont
+% EMAIL: pierreyves.dupont@gmail.com
+% The source of this beamer theme is under creative common licence
+% You are free to use it and modify it but you must cite the original author
+\mode<presentation>
+
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \ifnum\thepage=1\relax%
+		\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=\the\paperwidth, height=\the\paperheight]{BG.jpg}};
+		\fill[color=white] (0,0) rectangle (\the\paperwidth,2);
+		\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+		\fill[color=white] (0 , 2) rectangle (\the\paperwidth, 4);
+		\fill[color=masseyyellow] (0,0) rectangle(0.95,1.9);
+		\fill[color=masseyblue] (1.05,0) rectangle(\the\paperwidth,1.9);
+  \fi
+  \ifnum\thepage>1\relax%
+   \node[anchor=north west,inner sep=0] at (0,0) {\includegraphics[width=\the\paperwidth, height=30pt]{Banner.jpg}};
+%    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+%    \fill[red] (0,0) rectangle(\the\paperwidth,8);
+	\fi
+  \end{tikzpicture}
+}
+
+
+% Title page
+\defbeamertemplate*{title page}{texsx}[1][]
+{ 
+   \vskip5.8cm%
+    \begin{beamercolorbox}[wd=12.5cm,leftskip=0.5cm,sep=1pt,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.5cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=1cm,#1]{author}
+      \usebeamerfont{author}\insertauthor\newline
+	  \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+     \vskip0.2cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=1cm,#1]{date}
+      \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}
+  \vfill
+}
+
+% Items
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{sections/subsections in toc}[circle]
+\setbeamertemplate{itemize item}{\checkmark}
+\setbeamertemplate{itemize subitem}{\tiny{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\textopenbullet}
+
+\mode
+<all>

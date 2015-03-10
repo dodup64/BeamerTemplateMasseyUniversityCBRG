@@ -1,0 +1,29 @@
+% AUTHOR: Pierre-Yves Dupont
+% EMAIL: pierreyves.dupont@gmail.com
+% The source of this beamer theme is under creative common licence
+% You are free to use it and modify it but you must cite the original author
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{texsx}[1][]
+{
+\vskip1cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
+  \fill[masseyyellow] (0,0) rectangle(0.95,1.2);
+  \fill[masseyblue] (1.05,0) rectangle(\the\paperwidth,1.2);
+   \ifx\insertframesubtitle\@empty%
+		{\node[anchor=west, white,font=\normalsize] at (1.2,0.61){\insertframetitle};
+		 \node[anchor = west, masseyblue, font=\large] at (0,0.61){\textbf{\insertframenumber}};}
+		\else%
+			{\node[anchor= west, white,font=\normalsize] at (1.2,0.81){\insertframetitle};%
+			\node[anchor= west, white,font=\footnotesize] at (1.5,0.41){\insertframesubtitle};
+			 \node[anchor = west, masseyblue, font=\large] at (0,0.61){\textbf{\insertframenumber}};
+			}%
+		\fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+\mode<all>
